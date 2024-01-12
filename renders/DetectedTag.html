@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArborTag</title>
+    <link rel="stylesheet" href="DetectedTag.css" />
+  </head>
+  <body>
+    <div class="header-banner">
+      <h1>ArborTag</h1>
+      <p>By NatureMarkSystemsLLP</p>
+    </div>
+    <div class="container">
+      <div class="main">
+        <div class="right">
+          <button class="btn blue" id="openFileButton">PICK IMAGE</button>
+        </div>
+        <div class="left">
+          <div class="input-group">
+            <input type="text" id="latitude" placeholder="Latitude" />
+            <input type="text" id="longitude" placeholder="Longitude" />
+          </div>
+          <button class="btn green">Get Location</button>
+          <div class="input-group">
+            <input type="text" id="height" placeholder="Height" />
+            <input type="text" id="width" placeholder="Width" />
+          </div>
+          <div class="button-group">
+            <a href="menu.html">
+              <button class="btn red" onclick="discardData()">
+                Discard
+              </button></a
+            >
+            <a href="StopContinue.html">
+              <button class="btn save" onclick="saveData()">Save</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="cameranfc.html">
+      <button class="arrow-button">
+        <img src="../assets/leftarrow.png" alt="Next" class="next-arrow" />
+      </button>
+    </a>
+    <script src="../renderer.js"></script>
+  </body>
+</html>

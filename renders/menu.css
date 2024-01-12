@@ -1,0 +1,82 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+}
+
+.header-banner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 4rem;
+  background-color: #0f544b;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  width: 90%;
+}
+.header-banner a {
+  text-decoration: none;
+}
+
+h1,
+p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 100px;
+  /* margin: 20px auto; */
+  width: 80%;
+}
+
+.card {
+  background-color: #0f544b;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+}
+
+.card h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.next-arrow {
+  margin-bottom: 20px;
+  position: absolute;
+  margin-right: 20px;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+}
+.arrow-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+.arrow-button:hover .next-arrow {
+  opacity: 0.8;
+}

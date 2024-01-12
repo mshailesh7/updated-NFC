@@ -1,0 +1,94 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1;
+}
+
+.container {
+  background-color: #0f544b;
+  color: white;
+  width: 70%;
+  margin-left: 140px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+.header-banner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 4rem;
+  background-color: #0f544b;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  width: 90%;
+}
+
+h1,
+p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+h2 {
+  margin-bottom: 10px;
+  padding: 0;
+}
+.next-arrow {
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+.arrow-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+.arrow-button:hover .next-arrow {
+  opacity: 0.8;
+}
+input[type="date"],
+input[type="time"],
+input[type="text"] {
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #27ae60;
+  border-radius: 5px;
+  color: #2c3e50;
+}

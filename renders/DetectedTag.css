@@ -1,0 +1,154 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+  background-color: #0f544b;
+  width: 70%;
+  margin-left: 130px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+.dropdown {
+  display: flex;
+  justify-content: space-evenly;
+}
+select {
+  margin-left: 20px;
+}
+.dropdown select {
+  font-size: large;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #27ae60;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  font-size: medium;
+  font-weight: bold;
+  width: 40%;
+  padding: 15px;
+  border: 1px solid #27ae60;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+.btn {
+  color: white;
+  font-size: x-large;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.green {
+  margin-top: 10px;
+  margin-right: 80px;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #27ae60;
+}
+.btn.save {
+  margin-top: 20px;
+  margin-right: 80px;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #27ae60;
+}
+
+.btn.blue {
+  background-color: #3498db;
+  width: 80%;
+}
+
+.btn.red {
+  margin-top: 20px;
+  margin-right: 80px;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #e74c3c;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group .btn {
+  padding: 15px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+}
+.left {
+  flex: 3;
+}
+
+.right {
+  flex: 1;
+  margin-top: 80px;
+}
+
+.header-banner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 4rem;
+  background-color: #0f544b;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  width: 90%;
+}
+
+h1,
+p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.next-arrow {
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.arrow-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+.arrow-button:hover .next-arrow {
+  opacity: 0.8;
+}
