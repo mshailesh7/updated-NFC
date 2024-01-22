@@ -1,0 +1,47 @@
+import serial
+import time
+
+def nmea_to_decimal(degrees_minutes):
+    parts = degrees_minutes.split(".")
+    if len(parts) != 2:
+        return 0.0  # Invalid format, return zero
+
+    degrees = int(parts[0][:-2])
+    minutes = float(parts[0][-2:] + "." + parts[1])
+    return degrees + minutes / 60
+
+def to_degrees_minutes_seconds(decimal_degrees):
+    degrees = int(decimal_degrees)
+    minutes_full = (decimal_degrees - degrees) * 60
+    minutes = int(minutes_full)
+    seconds = int((minutes_full - minutes) * 60)
+    return degrees, minutes, seconds
+
+def parse_gngga(data):
+    parts = data.split(',')
+    if len(parts) > 6:
+        latitude = parts[2]
+        longitude = parts[4]
+        time_stamp = parts[1]
+        return latitude, longitude, time_stamp
+    return None, None, None
+
+while True:
+    try:
+        with serial.Serial('/dev/ttyAMA0', 9600, timeout=1) as ser:
+            while True:
+                data = ser.readline().decode('ascii', errors='replace').strip()
+                if data.startswith('$GNGGA'):
+                    lat_str, lon_str, time_stamp = parse_gngga(data)
+                    if lat_str and lon_str:
+                        lat_dec = nmea_to_decimal(lat_str)
+                        lon_dec = nmea_to_decimal(lon_str)
+                        lat_dms = to_degrees_minutes_seconds(lat_dec)
+                        lon_dms = to_degrees_minutes_seconds(lon_dec)
+                        print(f"Time: {time_stamp}, Decimal Degrees: {lat_dec:.6f}° N, {lon_dec:.6f}° E")
+                        print(f"    Degrees, Minutes, Seconds: {lat_dms[0]}° {lat_dms[1]}' {lat_dms[2]}\" N, {lon_dms[0]}° {lon_dms[1]}' {lon_dms[2]}\" E\n")
+    except serial.SerialException as e:
+        print("Serial exception: ", e)
+        time.sleep(5)  # wait before retrying
+    except KeyboardInterrupt:
+        break
