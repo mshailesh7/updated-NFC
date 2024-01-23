@@ -1,0 +1,21 @@
+{
+  "name": "csvpdftest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.1.3"
+  },
+  "dependencies": {
+    "json2csv": "^6.0.0-alpha.2",
+    "pdfkit": "^0.14.0",
+    "sqlite3": "^5.1.7",
+    "xlsx": "^0.18.5"
+  }
+}
